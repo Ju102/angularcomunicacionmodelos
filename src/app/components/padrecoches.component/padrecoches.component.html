@@ -1,0 +1,8 @@
+<div style="text-align: center; color: white;">
+    <h2>Lista de Coches</h2>
+    <div style="display: inline-flex;">
+        @for (coche of coches; track coche) {
+        <app-hijo [car]="coche" />
+        }
+    </div>
+</div>

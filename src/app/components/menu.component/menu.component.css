@@ -1,0 +1,69 @@
+:host {
+	display: block;
+}
+
+.app-menu {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	margin: 0; /* eliminate cualquier margen */
+	background: linear-gradient(90deg, rgba(12,18,26,1) 0%, rgba(20,27,36,1) 100%);
+	color: var(--text, #e6eef8);
+	box-shadow: 0 6px 18px rgba(2,6,23,0.6);
+	z-index: 1000;
+	border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+
+.menu-inner {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 12px 18px;
+}
+
+.menu-title {
+	margin: 0;
+	font-size: 0.95rem;
+	letter-spacing: 1px;
+	font-weight: 600;
+	color: var(--muted, #94a3b8);
+}
+
+.menu-list {
+	list-style: none;
+	display: flex;
+	gap: 10px;
+	margin: 0;
+	padding: 0;
+	align-items: center;
+}
+
+.menu-item a {
+	display: inline-block;
+	color: var(--text, #e6eef8);
+	text-decoration: none;
+	padding: 8px 12px;
+	border-radius: 8px;
+	transition: background 160ms ease, color 160ms ease, transform 120ms ease;
+	font-weight: 500;
+}
+
+.menu-item a:hover {
+	background: rgba(255,255,255,0.03);
+	transform: translateY(-2px);
+}
+
+/* Small screens: stack menu items into a compact row */
+@media (max-width: 520px) {
+	.menu-inner { padding: 10px 12px; }
+	.menu-title { display: none; }
+	.menu-list { gap: 6px; }
+	.menu-item a { padding: 6px 8px; font-size: 0.95rem; }
+}
+
+/* Make sure the rest of the page doesn't hide behind the fixed nav. Height ~52px */
+

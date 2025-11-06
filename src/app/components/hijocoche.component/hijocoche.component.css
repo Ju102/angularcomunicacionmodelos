@@ -1,0 +1,34 @@
+.off {
+    background-color: red;
+}
+
+.on {
+    background-color: green;
+}
+
+/* Card styles adapted to dark theme */
+.car-card {
+    width: 220px;
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    margin: 18px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015));
+    color: var(--text, #e6eef8);
+    border: 1px solid rgba(255,255,255,0.04);
+    box-shadow: 0 10px 30px rgba(2,6,23,0.45);
+}
+
+.car-title { margin: 0 0 6px 0; font-size: 1.05rem; }
+.car-status { margin: 6px 0 8px 0; padding: 6px 8px; border-radius: 8px; display: inline-block; }
+.car-speed { margin: 8px 0; color: var(--muted, #94a3b8); font-weight: 500; }
+.car-actions { display: flex; gap: 8px; justify-content: center; }
+.car-actions button, .toggle-btn {
+    background: transparent;
+    color: var(--text);
+    border: 1px solid rgba(255,255,255,0.04);
+    padding: 6px 10px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.car-actions button:hover, .toggle-btn:hover { background: rgba(255,255,255,0.03); transform: translateY(-2px); }

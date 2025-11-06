@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+	/* Dark theme variables */
+	--bg: #07101a;
+	--surface: #0b1220;
+	--muted: #94a3b8;
+	--accent: #9aa84a;
+	--text: #e6eef8;
+	--card: #0f1724;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+	height: 100%;
+}
+
+body {
+	margin: 0; /* ensure the app spans to edges */
+	background: radial-gradient(circle at 10% 10%, rgba(255,255,255,0.01), transparent), var(--bg);
+	color: var(--text);
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	line-height: 1.45;
+	/* leave room for fixed top nav (approx 64px) so content isn't hidden */
+	padding-top: 68px;
+}
+
+a { color: var(--accent); }
+
+/* Utility: a subtle card style used by small components */
+.card {
+	background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+	border-radius: 10px;
+	padding: 12px;
+	color: var(--text);
+	border: 1px solid rgba(255,255,255,0.03);
+	box-shadow: 0 8px 20px rgba(2,6,23,0.45);
+}
+
+/* Small helper for visually-muted text */
+.muted { color: var(--muted); }
+
+/* Make images and iframes responsive by default */
+img, iframe { max-width: 100%; height: auto; }
+
+/* Add smooth transitions where useful */
+* { transition: background 180ms ease, color 160ms ease, border-color 160ms ease; }
+
+/* End of global styles */

@@ -1,0 +1,25 @@
+/* Styles for parent of deportes, align children in a row and match dark theme */
+.sports-list {
+  padding: 18px 14px 36px 14px;
+}
+
+.sports-title {
+  margin: 0 0 12px 0;
+  color: var(--text);
+  text-align: center;
+  font-size: 1.25rem;
+}
+
+.sports-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.sport-item {
+  display: block; /* each child wrapped in a block for layout */
+}
+
+.message { text-align: center; margin-top: 12px; }

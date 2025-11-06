@@ -1,0 +1,15 @@
+<div class="sports-list">
+    <h2 class="sports-title">Padre Deportes</h2>
+
+    <div class="sports-row">
+        @for (sport of deportes; track sport) {
+            <div class="sport-item">
+                <app-hijo-deporte [sport]="sport" (seleccionarFav)="seleccionarFavoritoPadre($event)"></app-hijo-deporte>
+            </div>
+        }
+    </div>
+
+    @if (mensaje) {
+        <p class="muted message">{{ mensaje }}</p>
+    }
+</div>

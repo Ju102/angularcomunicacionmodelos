@@ -1,0 +1,14 @@
+<div class="car-card">
+    <h2 class="car-title">{{ car.marca }} {{ car.modelo }}</h2>
+    <h3 [ngClass]="{
+                on: car.estado == true,
+                off: car.estado == false
+        }" class="car-status">{{ mensaje }}</h3>
+    <h4 class="car-speed">Velocidad actual: {{ car.velocidad }} km/h</h4>
+    <div class="car-actions">
+        <button (click)="acelerar()">Acelerar</button>
+        <button (click)="frenar()">Frenar</button>
+    </div>
+    <div style="height:8px"></div>
+    <button class="toggle-btn" (click)="cocheOnOff()">Encender / apagar</button>
+</div>

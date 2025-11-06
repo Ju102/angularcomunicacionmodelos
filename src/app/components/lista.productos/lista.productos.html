@@ -1,0 +1,11 @@
+<div class="product-list">
+    <h1 class="products-title">Modelos de Producto - Angular</h1>
+
+    <div class="grid">
+        <div class="card" *ngFor="let prod of productos">
+            <img [src]="prod.imagen" alt="{{ prod.nombre }}" />
+            <h2>{{ prod.nombre }}</h2>
+            <p class="price">{{ prod.precio }}€</p>
+        </div>
+    </div>
+</div>
