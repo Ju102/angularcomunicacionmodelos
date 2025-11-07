@@ -13,7 +13,7 @@ import { PadredeportesComponent } from './components/padredeportes.component/pad
 import { HijodeporteComponent } from './components/hijodeporte.component/hijodeporte.component';
 import { ComicComponent } from './components/comic.component/comic.component';
 import { LibreriaComponent } from './components/libreria.component/libreria.component';
-
+import { ComicsService } from './services/service.comic';
 
 @NgModule({
   declarations: [
@@ -31,11 +31,12 @@ import { LibreriaComponent } from './components/libreria.component/libreria.comp
   imports: [
     BrowserModule,
     routing,
-    FormsModule
+    FormsModule,
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
-    appRoutingProvider
+    appRoutingProvider,
+    ComicsService,
   ],
   bootstrap: [App]
 })
