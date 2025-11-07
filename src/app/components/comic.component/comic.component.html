@@ -1,1 +1,10 @@
-<p>comic.component works!</p>
+<div class="comic-card">
+    <img class="comic-img" src="{{comic.imagen}}" alt="{{comic.titulo}}"/>
+    <h3 class="comic-title">{{ comic.titulo }}</h3>
+    <p class="comic-desc">{{ comic.descripcion }}</p>
+
+    <div class="comic-actions">
+        <button class="btn-small" (click)="marcarFavorito()">FAV</button>
+        <button class="btn-small" (click)="eliminarse()">Eliminar</button>
+    </div>
+</div>

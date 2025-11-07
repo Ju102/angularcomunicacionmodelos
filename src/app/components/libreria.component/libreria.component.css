@@ -1,0 +1,73 @@
+/* Library styles: center comics as cards inline and style favorite */
+.library { padding: 18px 14px 36px 14px; }
+.library-title { color: var(--text); text-align: center; margin: 0 0 12px 0; }
+
+.comics-row {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+.comic-item { display: block; }
+
+.divider { margin: 18px auto; border-color: rgba(255,255,255,0.04); max-width: 800px; }
+.fav-wrap { display:flex; justify-content:center; margin-top: 12px; }
+
+@media (max-width: 520px) { .comics-row { gap: 10px; } }
+
+/* Layout: main + aside (form) */
+.library-content {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.library-main { flex: 1; }
+
+.library-aside {
+  width: 320px;
+  align-self: flex-start;
+  /* Sticky to viewport so it remains visible on the right while scrolling */
+  position: sticky;
+  top: 84px;
+}
+
+.form-card {
+  padding: 14px;
+  border-radius: 12px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(255,255,255,0.01));
+  border: 1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 12px 30px rgba(2,6,23,0.45);
+}
+
+.form-title { margin: 0 0 10px 0; color: var(--text); }
+.form-label { display:block; font-size: 0.9rem; color: var(--muted); margin-bottom:6px; }
+.form-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.04);
+  background: rgba(255,255,255,0.01);
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  display: inline-block;
+  background: var(--accent);
+  color: #07101a;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.btn-primary:hover { transform: translateY(-2px); }
+
+/* Responsive: on narrow screens place the aside under the main content and full width */
+@media (max-width: 900px) {
+  .library-content { flex-direction: column; }
+  .library-aside { position: relative; top: auto; width: 100%; }
+}
+

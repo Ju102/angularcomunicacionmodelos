@@ -1,1 +1,48 @@
-<p>libreria.component works!</p>
+<div class="library">
+
+    <div class="library-content">
+        <main class="library-main">
+            <h2 class="library-title">Librería</h2>
+
+
+            <div class="comics-row">
+                @for(c of comics; track c; let i = $index) {
+                <div class="comic-item">
+                    <app-comic [comic]="c" (selectFavorito)="selectFav($event)" [index]="i"
+                        (deleteComic)="deleteComic($event)"></app-comic>
+                </div>
+                }
+            </div>
+
+            @if (favComic != null) {
+            <hr class="divider" />
+            <div class="fav-wrap">
+                <app-comic [comic]="favComic"></app-comic>
+            </div>
+            }
+
+        </main>
+
+        <aside class="library-aside">
+            <div class="form-card">
+                <form #comicForm="ngForm" (ngSubmit)="createComic()">
+                    <h5 class="form-title">Añadir comic</h5>
+                    <label class="form-label">Introduce el título:</label>
+                    <input class="form-input" name="cajatitulo" #cajatitulo type="text" />
+
+                    <label class="form-label">Introduce la URL de la imagen:</label>
+                    <input class="form-input" name="cajaimagen" #cajaimagen type="text" />
+
+                    <label class="form-label">Introduce la descripción:</label>
+                    <input class="form-input" name="cajadescripcion" #cajadescripcion type="text" />
+
+                    <div style="height:8px"></div>
+                    <button class="btn-primary" type="submit">Añadir</button>
+                </form>
+            </div>
+        </aside>
+    </div>
+    <!--
+    https://preview.redd.it/made-an-avengers-infinity-war-poster-formatted-like-the-v0-zuqoc2t44f4d1.jpg?width=640&crop=smart&auto=webp&s=edad3bb8b8098c60ed26e1325cd31065d9cbe960
+    -->
+</div>

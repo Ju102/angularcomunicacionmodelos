@@ -17,9 +17,13 @@
 
 .grid {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	/* use auto-fit so cards keep a consistent width and wrap; center the whole grid */
+	grid-template-columns: repeat(auto-fit, minmax(180px, 220px));
 	gap: 18px;
 	align-items: start;
+	justify-content: center; /* center columns within the container */
+	margin: 0 auto; /* center grid within its parent */
+	max-width: 1100px; /* prevents excessive stretching on large screens */
 }
 
 /* reuse global .card where possible; more specific rules here to adjust color */
